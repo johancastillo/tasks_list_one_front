@@ -3,9 +3,12 @@ import React, {Component} from 'react';
 //Styles.
 import './../assets/css/Header.css';
 
+
 class Header extends Component{
 
-    addTask = () => console.log('Add Task')
+    addTask = () => {
+        console.log('Add Task');
+    }
 
     render(){
         return(
