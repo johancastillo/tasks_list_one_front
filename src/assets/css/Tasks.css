@@ -4,21 +4,21 @@
 ============
 */
 
-.tareas .list {
+.tasks .list {
 	list-style: none;
 }
 
-.tareas .list li {
+.tasks .list li {
 	border-bottom: 1px solid #B6B6B6;
 }
 
-.tareas .list li a {
+.tasks .list li p {
 	color: #212121;
 	display: block;
 	padding: 20px 0;
 	text-decoration: none;
 }
 
-.tareas .list li a:hover {
+.tasks .list li p:hover {
 	text-decoration: line-through;
 }

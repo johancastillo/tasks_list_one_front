@@ -3,18 +3,35 @@ import React, { Component } from 'react';
 //Styles.
 import './../assets/css/Tasks.css';
 
-class Tasks extends Component{
-    render(){
-        return(
-            <div class="tareas">
-		        <div class="wrap">
-                    <ul class="list" id="lista">
-                        <li><a href="">1 This is the task one.</a></li>
-                        <li><a href="">2 This is the task two.</a></li>
-                        <li><a href="">3 This is the task three.</a></li>
-                    </ul>
-		        </div>
-	        </div>
+//Data.
+import tasks from './../simulation_data/tasks.json';
+
+class Tasks extends Component {
+
+    state = {
+        tasks: tasks
+    }
+
+    render() {
+        return (
+            <div>
+
+                {
+                    this.state.tasks.map(task => {
+                        return (
+                            <div className="tasks">
+                                <div className="wrap">
+                                    <ul className="list">
+                                        <li>
+                                            <p key={task.id}>{task.title}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         )
     }
 }
